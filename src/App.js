@@ -1,15 +1,20 @@
 import './App.css';
-import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
-import Header from './Component/Header';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Signup from './Pages/signup';
+import Dashboard from './Pages/dashboadPage';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path = "/" element = {<signup/>} />
-        <Route path = "/dashboard" element = {<dashboardPage />} />
-      </Routes>
-    </Router>
+    <>
+    <ToastContainer />
+      <Router>
+        <Routes>
+          <Route path = "/" element = {<Signup />} />
+          <Route path = "/dashboard" element = {<Dashboard />} />
+        </Routes>
+      </Router>
+    </>
   );
 }
 
