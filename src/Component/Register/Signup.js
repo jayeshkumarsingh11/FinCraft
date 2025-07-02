@@ -87,7 +87,7 @@ function Signup({setLogin}) {
               <div className = "mid">or</div>
               <Button text = {loading?"Loading...":"Signup using Google"} onClick={() => googleRegister(navigate)}/>
               <div className="account-text">
-                Don't have an account? <span className="link" onClick={() => setLogin(true)}>Sign Up</span>
+                Don't have an account? <span className="link" onClick={() => setLogin(true)}>Login</span>
               </div>
           </form>
       </div>

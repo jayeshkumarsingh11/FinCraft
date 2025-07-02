@@ -13,6 +13,7 @@ function googleRegister(navigate) {
         const token = credential.accessToken;
         // The signed-in user info.
         const user = result.user;
+        console.log("user", user.displayName);
         createDoc(user, user.displayName);
         navigate("/Dashboard");
         toast.success("User Logged In Successfully");

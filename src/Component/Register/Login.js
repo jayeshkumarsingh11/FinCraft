@@ -6,6 +6,7 @@ import { auth } from '../../firebase';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 import googleRegister from './googleLogin';
+import createDoc from './doc';
 
 function Login({setLogin}) {
   const [email, setEmail] = useState("");
@@ -26,6 +27,8 @@ function Login({setLogin}) {
           const errorMessage = error.message;
           toast.error(errorMessage);
         });
+        setEmail("");
+        setPassword("");
     } else {
       toast.error("Please enter email and password");
     }
@@ -54,7 +57,7 @@ function Login({setLogin}) {
               <div className = "mid">or</div>
               <Button text = {"Login using Google"} onClick = {() =>googleRegister(navigate)} />
               <div className="account-text">
-                Don't have an account? <span className="link" onClick = {() => setLogin(false)}>Login</span>
+                Don't have an account? <span className="link" onClick = {() => setLogin(false)}>Signup</span>
               </div>
           </form>
       </div>
