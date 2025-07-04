@@ -20,3 +20,14 @@
     color: #fff;
     transition: all 0.3s;
 }
+
+/* .btn-blue {
+  background-color: var(--theme);
+  color: #fff;
+}
+
+.btn-blue:hover {
+  background-color: #fff !important;
+  color: var(--theme) !important;
+  transition: all 0.3s;
+} */

@@ -5,6 +5,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { signOut } from "firebase/auth";
+import userImg from"../Image/user.svg"
 
 function Header() {
     const [user, loading] = useAuthState(auth);
@@ -32,7 +33,14 @@ function Header() {
     return (
         <div className = "navbar">
             <div className="logo">FinCraft</div>
-            {user && <div className="logo link" onClick={logoutfnc}>Logout</div>}
+            {user && (
+                <>
+                    <div className="logo">
+                        <img src = {user.photoURL ? user.photoURL : userImg} className="user-img" alt="user" />
+                        <div className="logo link" onClick={logoutfnc}>Logout</div>
+                    </div>
+                </>
+            )}
         </div>
     )
 }

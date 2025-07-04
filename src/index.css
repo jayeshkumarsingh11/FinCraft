@@ -41,3 +41,45 @@ input {
 .custom-input:placeholder{
     color: grey;
 }
+
+.input-flex{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  gap: 0.5 rem;
+  box-shadow: var(--shadow);
+  border-radius: 0.5rem;
+  padding: 0rem 0.5rem;
+}
+
+.input-flex input{
+  width: 100%;
+  padding: 0.5rem;
+  border: 0;
+}
+
+.input-flex input:focus{
+  outline: none;
+}
+
+.select-input {
+  width: 30%;
+  margin-right: 10;
+  display: flex;
+  align-items: center;
+  box-shadow: var(--shadow);
+  border-radius: 0.5rem !important;
+  padding: 0.2rem 0.5rem;
+}
+
+.select-input > div {
+  border: 0px solid #fff !important;
+}
+
+.file {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  width: 400px;
+}
